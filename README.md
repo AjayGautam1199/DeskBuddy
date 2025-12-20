@@ -1,2 +1,1 @@
-# DeskBuddy
-This is your companion. 
+This is your companion.
