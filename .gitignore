@@ -1,0 +1,10 @@
+build/
+assets/
+backup/
+cache/
+components/
+deskbuddyUi.sll
+deskbuddyUi.slp
+deskbuddyUi.spj
+project.info
+Themes.slt

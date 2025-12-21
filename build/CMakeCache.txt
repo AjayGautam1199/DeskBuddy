@@ -371,15 +371,6 @@ USE_SHARED_MBEDTLS_LIBRARY:BOOL=OFF
 USE_STATIC_MBEDTLS_LIBRARY:BOOL=ON
 
 //Value Computed by CMake
-abcdefg_BINARY_DIR:STATIC=/Users/ajaygautam/Work_folder/DeskBuddy/build
-
-//Value Computed by CMake
-abcdefg_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-abcdefg_SOURCE_DIR:STATIC=/Users/ajaygautam/Work_folder/DeskBuddy
-
-//Value Computed by CMake
 esp-idf_BINARY_DIR:STATIC=/Users/ajaygautam/Work_folder/DeskBuddy/build/esp-idf
 
 //Value Computed by CMake
