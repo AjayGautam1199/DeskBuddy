@@ -25,6 +25,7 @@
 /* -------------------------------------------------------------------------
  * CONFIGURATION
  * -----------------------------------------------------------------------*/
+// Display Pins
 #define LCD_HOST    SPI2_HOST 
 #define LCD_H_RES   240
 #define LCD_V_RES   280
@@ -35,6 +36,13 @@
 #define PIN_NUM_RST 6
 #define PIN_NUM_CLK 7
 #define PIN_NUM_MOSI 9
+
+// Button Pins (Active Low: Connect to GND when pressed)
+#define BTN_UP      2
+#define BTN_LEFT    3
+#define BTN_DOWN    4
+#define BTN_RIGHT   5
+#define BTN_OK      8
 
 SemaphoreHandle_t gui_mutex;
 
@@ -58,6 +66,51 @@ void ui_print(const char * format, ...) {
 }
 
 /* -------------------------------------------------------------------------
+ * INPUT DEVICE (BUTTONS)
+ * -----------------------------------------------------------------------*/
+void init_buttons() {
+    // Configure all button pins as Input with Pull-up
+    gpio_config_t io_conf = {};
+    io_conf.intr_type = GPIO_INTR_DISABLE;
+    io_conf.mode = GPIO_MODE_INPUT;
+    io_conf.pull_down_en = 0;
+    io_conf.pull_up_en = 1; // Enable Pull-up
+    // Bitmask of all pins
+    io_conf.pin_bit_mask = ((1ULL<<BTN_UP) | (1ULL<<BTN_DOWN) | (1ULL<<BTN_LEFT) | (1ULL<<BTN_RIGHT) | (1ULL<<BTN_OK));
+    gpio_config(&io_conf);
+}
+
+// LVGL calls this function periodically to read the buttons
+static void keypad_read(lv_indev_drv_t * drv, lv_indev_data_t * data)
+{
+    uint32_t act_key = 0;
+
+    // Check GPIOs (Logic 0 means pressed because of Pull-up)
+    if(gpio_get_level(BTN_OK) == 0) {
+        act_key = LV_KEY_ENTER; // Adds a new line (as you requested)
+    } 
+    else if(gpio_get_level(BTN_UP) == 0) {
+        act_key = LV_KEY_UP;    // CHANGED: Moves cursor UP (Scrolls Up)
+    } 
+    else if(gpio_get_level(BTN_DOWN) == 0) {
+        act_key = LV_KEY_DOWN;  // CHANGED: Moves cursor DOWN (Scrolls Down)
+    } 
+    else if(gpio_get_level(BTN_LEFT) == 0) {
+        act_key = LV_KEY_LEFT;  // Moves cursor Left
+    } 
+    else if(gpio_get_level(BTN_RIGHT) == 0) {
+        act_key = LV_KEY_RIGHT; // Moves cursor Right
+    }
+
+    if(act_key != 0) {
+        data->state = LV_INDEV_STATE_PRESSED;
+        data->key = act_key;
+    } else {
+        data->state = LV_INDEV_STATE_RELEASED;
+    }
+}
+
+/* -------------------------------------------------------------------------
  * NimBLE BLUETOOTH CALLBACKS
  * -----------------------------------------------------------------------*/
 static int ble_gap_event(struct ble_gap_event *event, void *arg) {
@@ -69,12 +122,10 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg) {
             rc = ble_hs_adv_parse_fields(&fields, event->disc.data, event->disc.length_data);
             if (rc != 0) return 0;
 
-            // Only print if device has a name
             if (fields.name_len > 0) {
                 char name_buf[32];
                 int len = fields.name_len > 31 ? 31 : fields.name_len;
                 snprintf(name_buf, len + 1, "%.*s", len, fields.name);
-                
                 ui_print("Found: %s (%d)", name_buf, event->disc.rssi);
             }
             break;
@@ -84,9 +135,7 @@ static int ble_gap_event(struct ble_gap_event *event, void *arg) {
 
 static void ble_app_on_sync(void) {
     struct ble_gap_disc_params disc_params;
-    
-    // Configure Scan
-    disc_params.filter_duplicates = 1; // 1 = don't spam the same device
+    disc_params.filter_duplicates = 1;
     disc_params.passive = 0;
     disc_params.itvl = 0;
     disc_params.window = 0;
@@ -135,6 +184,9 @@ static bool notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io, esp_lcd_
 void app_main(void)
 {
     gui_mutex = xSemaphoreCreateMutex();
+    
+    // 0. Initialize Buttons
+    init_buttons();
 
     // 1. Hardware Init
     spi_bus_config_t buscfg = {
@@ -197,13 +249,39 @@ void app_main(void)
     disp_drv.user_data = panel_handle;
     lv_disp_drv_register(&disp_drv);
 
-    // 3. UI Init
+    // ----------------------------------------------------
+    // 3. Register Keypad Input Driver
+    // ----------------------------------------------------
+    static lv_indev_drv_t indev_drv;
+    lv_indev_drv_init(&indev_drv);
+    indev_drv.type = LV_INDEV_TYPE_KEYPAD;
+    indev_drv.read_cb = keypad_read;
+    lv_indev_t * my_indev = lv_indev_drv_register(&indev_drv);
+
+    // ----------------------------------------------------
+    // 4. Create Navigation Group
+    // ----------------------------------------------------
+    // A group links the hardware buttons to the software objects
+    lv_group_t * g = lv_group_create();
+    lv_group_set_default(g); // Important: New objects will be added here automatically
+    lv_indev_set_group(my_indev, g);
+
+    // 5. UI Init
     xSemaphoreTake(gui_mutex, portMAX_DELAY);
     printf("Loading UI...\n");
     ui_init();
+    
+    // Manual Group Assignment (Just in case ui_init didn't catch them)
+    // If Screen 3 is active, let's ensure the Text Area is in the group so we can scroll it
+    if(ui_TextArea1 != NULL) {
+        lv_group_add_obj(g, ui_TextArea1);
+        lv_group_focus_obj(ui_TextArea1); // Force focus on the text area
+        lv_obj_add_state(ui_TextArea1, LV_STATE_FOCUSED);
+    }
+    
     xSemaphoreGive(gui_mutex);
 
-    // 4. Start NimBLE
+    // 6. Start NimBLE
     ui_print("Initializing NimBLE...");
     init_bluetooth();
 

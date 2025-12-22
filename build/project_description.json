@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "DeskBuddy",
-    "project_version":    "ba0a444-dirty",
+    "project_version":    "c22c430-dirty",
     "project_path":       "/Users/ajaygautam/Work_folder/DeskBuddy",
     "idf_path":           "/Users/ajaygautam/esp/v5.5.1/esp-idf",
     "build_dir":          "/Users/ajaygautam/Work_folder/DeskBuddy/build",
