@@ -7,6 +7,13 @@
 
 lv_obj_t *ui_Screen2 = NULL;lv_obj_t *ui_Image1 = NULL;
 // event funtions
+void ui_event_Screen2( lv_event_t * e) {
+    lv_event_code_t event_code = lv_event_get_code(e);
+
+if ( event_code == LV_EVENT_SCREEN_LOADED) {
+      _ui_screen_change( &ui_Screen3, LV_SCR_LOAD_ANIM_MOVE_TOP, 3000, 0, &ui_Screen3_screen_init);
+}
+}
 
 // build funtions
 
@@ -22,6 +29,8 @@ lv_obj_set_height( ui_Image1, 280);
 lv_obj_set_align( ui_Image1, LV_ALIGN_CENTER );
 lv_obj_add_flag( ui_Image1, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
 lv_obj_clear_flag( ui_Image1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
+
+lv_obj_add_event_cb(ui_Screen2, ui_event_Screen2, LV_EVENT_ALL, NULL);
 
 }
 

@@ -18,6 +18,7 @@ extern "C" {
 ///////////////////// SCREENS ////////////////////
 #include "screens/ui_Screen1.h"
 #include "screens/ui_Screen2.h"
+#include "screens/ui_Screen3.h"
 
 ///////////////////// VARIABLES ////////////////////
 extern lv_anim_t * Opacitychange_Animation( lv_obj_t *TargetObject, int delay);
@@ -26,7 +27,7 @@ extern lv_anim_t * Opacitychange_Animation( lv_obj_t *TargetObject, int delay);
 extern lv_obj_t *ui____initial_actions0;
 
 // IMAGES AND IMAGE SETS
-LV_IMG_DECLARE( ui_img_ready_png);   // assets/Ready.png
+LV_IMG_DECLARE( ui_img_ready_png);   // assets/ready.png
 LV_IMG_DECLARE( ui_img_mega_png);   // assets/mega.png
 
 // UI INIT

@@ -12,7 +12,7 @@ void ui_event_Screen1( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);
 
 if ( event_code == LV_EVENT_SCREEN_LOADED) {
-      _ui_screen_change( &ui_Screen2, LV_SCR_LOAD_ANIM_OVER_BOTTOM, 5000, 2, &ui_Screen2_screen_init);
+      _ui_screen_change( &ui_Screen2, LV_SCR_LOAD_ANIM_OVER_BOTTOM, 3000, 2, &ui_Screen2_screen_init);
 }
 if ( event_code == LV_EVENT_SCREEN_LOADED) {
       Opacitychange_Animation(ui_Image2, 0);
@@ -28,8 +28,8 @@ lv_obj_clear_flag( ui_Screen1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 
 ui_Image2 = lv_img_create(ui_Screen1);
 lv_img_set_src(ui_Image2, &ui_img_ready_png);
-lv_obj_set_width( ui_Image2, 240);
-lv_obj_set_height( ui_Image2, 240);
+lv_obj_set_width( ui_Image2, 250);
+lv_obj_set_height( ui_Image2, 250);
 lv_obj_set_x( ui_Image2, 1 );
 lv_obj_set_y( ui_Image2, 1 );
 lv_obj_set_align( ui_Image2, LV_ALIGN_CENTER );

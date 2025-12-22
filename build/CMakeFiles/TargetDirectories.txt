@@ -463,6 +463,7 @@
 /Users/ajaygautam/Work_folder/DeskBuddy/build/esp-idf/esp_gdbstub/CMakeFiles/install.dir
 /Users/ajaygautam/Work_folder/DeskBuddy/build/esp-idf/esp_gdbstub/CMakeFiles/install/local.dir
 /Users/ajaygautam/Work_folder/DeskBuddy/build/esp-idf/esp_gdbstub/CMakeFiles/install/strip.dir
+/Users/ajaygautam/Work_folder/DeskBuddy/build/esp-idf/bt/CMakeFiles/__idf_bt.dir
 /Users/ajaygautam/Work_folder/DeskBuddy/build/esp-idf/bt/CMakeFiles/edit_cache.dir
 /Users/ajaygautam/Work_folder/DeskBuddy/build/esp-idf/bt/CMakeFiles/rebuild_cache.dir
 /Users/ajaygautam/Work_folder/DeskBuddy/build/esp-idf/bt/CMakeFiles/list_install_components.dir
