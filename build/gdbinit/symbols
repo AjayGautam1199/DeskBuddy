@@ -13,8 +13,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file /Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader/bootloader.elf
+    add-symbol-file /Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file /Users/ajaygautam/Work_folder/DeskBuddy/build/DeskBuddy.elf
+file /Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/DeskBuddy.elf
