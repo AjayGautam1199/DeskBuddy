@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/CMakeFiles/bootloader"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/CMakeFiles/bootloader.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

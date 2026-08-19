@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include
+# Install script for directory: /Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,113 +34,42 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Users/ajaygautam/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump")
+  set(CMAKE_OBJDUMP "/Users/ajaygautam/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mbedtls" TYPE FILE PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ FILES
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aria.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1write.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/block_cipher.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/build_info.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/camellia.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ccm.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/chacha20.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/chachapoly.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cmac.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/compat-2.x.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_adjust_legacy_crypto.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_adjust_legacy_from_psa.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_adjust_psa_from_legacy.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_adjust_psa_superset_legacy.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_adjust_ssl.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_adjust_x509.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config_psa.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/constant_time.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/des.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecjpake.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/error.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/gcm.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hkdf.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/lms.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/mbedtls_config.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/memory_buffer_alloc.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/net_sockets.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/nist_kw.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/oid.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pem.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs12.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs5.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs7.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/poly1305.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/private_access.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/psa_util.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ripemd160.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha3.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_cache.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_cookie.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ticket.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/threading.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/timing.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/version.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_csr.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/build_info.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/error.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/mbedtls_config.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/net_sockets.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/oid.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs7.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_cache.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_cookie.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ticket.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/timing.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/version.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_csr.h"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/psa" TYPE FILE PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ FILES
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/build_info.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_adjust_auto_enabled.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_adjust_config_dependencies.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_adjust_config_key_pair_types.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_adjust_config_synonyms.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_builtin_composites.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_builtin_key_derivation.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_builtin_primitives.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_compat.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_config.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_driver_common.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_driver_contexts_composites.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_driver_contexts_primitives.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_extra.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_legacy.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_platform.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_se_driver.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_sizes.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_struct.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_types.h"
-    "/Users/ajaygautam/esp/v5.5.1/esp-idf/components/mbedtls/mbedtls/include/psa/crypto_values.h"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mbedtls/private" TYPE FILE PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ FILES
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/private/config_adjust_ssl.h"
+    "/Users/ajaygautam/.espressif/v6.0.2/esp-idf/components/mbedtls/mbedtls/include/mbedtls/private/config_adjust_x509.h"
     )
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/esp-idf/mbedtls/mbedtls/include/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

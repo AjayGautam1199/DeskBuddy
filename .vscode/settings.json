@@ -1,4 +1,17 @@
 {
-    "idf.port": "/dev/tty.usbmodem2101",
-    "idf.flashType": "UART"
+  "idf.port": "/dev/tty.usbmodem1101",
+  "idf.flashType": "UART",
+  "idf.currentSetup": "/Users/ajaygautam/.espressif/v6.0.2/esp-idf",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s3"
+  },
+  "clangd.path": "/Users/ajaygautam/.espressif/tools/esp-clang/esp-20.1.1_20250829/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=/Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build"
+  ],
+  "idf.openOcdConfigs": [
+    "board/esp32s3-builtin.cfg"
+  ]
 }

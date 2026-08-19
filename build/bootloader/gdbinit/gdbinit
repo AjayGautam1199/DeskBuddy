@@ -1,2 +1,2 @@
-source /Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader/gdbinit/symbols
-source /Users/ajaygautam/Work_folder/DeskBuddy/build/bootloader/gdbinit/connect
+source /Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader/gdbinit/symbols
+source /Users/ajaygautam/WorkAtTemple/DisplayProject/DeskBuddy/build/bootloader/gdbinit/connect
